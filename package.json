@@ -1,7 +1,7 @@
 {
 	"name": "q-ratelimit",
 	"version": "0.0.1",
-	"description": "semaphore implementation for Q",
+	"description": "Rate limiting (throttling) implementation for Q",
 	"engine": "node >= 0.6.0",
 	"main": "index.js",
 	"dependencies": {
