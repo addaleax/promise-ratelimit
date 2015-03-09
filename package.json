@@ -11,7 +11,7 @@
 		"mocha": "*",
 		"istanbul": "*",
 		"coveralls": "*",
-		"lodash": "^3.3.1"
+		"lodash": "~3.5.0"
 	},
 	"homepage": "https://github.com/addaleax/q-ratelimit",
 	"repository": {
