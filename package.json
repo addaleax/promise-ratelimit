@@ -1,0 +1,33 @@
+{
+	"name": "q-ratelimit",
+	"version": "0.0.1",
+	"description": "semaphore implementation for Q",
+	"engine": "node >= 0.6.0",
+	"main": "index.js",
+	"dependencies": {
+		"q": "~1.2.0"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"istanbul": "*",
+		"coveralls": "*",
+		"lodash": "^3.3.1"
+	},
+	"homepage": "https://github.com/addaleax/q-ratelimit",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:addaleax/q-ratelimit.git" 
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/addaleax/q-ratelimit/raw/master/LICENSE"
+		}
+	],
+	"scripts": {
+		"test": "mocha test -s 65000 -t 8000"
+	},
+	"bugs": {
+		"url": "https://github.com/addaleax/q-ratelimit/issues"
+	}
+}
