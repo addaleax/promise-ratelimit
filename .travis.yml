@@ -5,7 +5,7 @@ node_js:
   - "iojs-v1"
   - "iojs-v2"
   - "iojs-v3"
-  - "iojs"
+  - "4.0.0"
 script:
   - ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec -s 6500 -t 8000
 after_success:
