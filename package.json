@@ -1,6 +1,10 @@
 {
 	"name": "q-ratelimit",
 	"version": "0.0.2",
+	"author": {
+		"name": "Anna Henningsen",
+		"email": "sqrt@entless.org"
+	},
 	"description": "Rate limiting (throttling) implementation for Q",
 	"engine": "node >= 0.6.0",
 	"main": "index.js",
