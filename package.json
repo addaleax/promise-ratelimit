@@ -1,32 +1,29 @@
 {
-	"name": "q-ratelimit",
+	"name": "promise-ratelimit",
 	"version": "0.0.2",
 	"author": {
 		"name": "Anna Henningsen",
 		"email": "sqrt@entless.org"
 	},
-	"description": "Rate limiting (throttling) implementation for Q",
-	"engine": "node >= 0.6.0",
+	"description": "Rate limiting (throttling) implementation for ES6 Promises",
+	"engine": "node >= 1.0",
 	"main": "index.js",
-	"dependencies": {
-		"q": "~1.4.1"
-	},
 	"devDependencies": {
 		"mocha": "*",
 		"istanbul": "*",
 		"coveralls": "*",
 		"lodash": "~3.10.0"
 	},
-	"homepage": "https://github.com/addaleax/q-ratelimit",
+	"homepage": "https://github.com/addaleax/promise-ratelimit",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:addaleax/q-ratelimit.git" 
+		"url": "git@github.com:addaleax/promise-ratelimit.git" 
 	},
 	"license": "MIT",
 	"scripts": {
 		"test": "mocha test -s 6500 -t 8000"
 	},
 	"bugs": {
-		"url": "https://github.com/addaleax/q-ratelimit/issues"
+		"url": "https://github.com/addaleax/promise-ratelimit/issues"
 	}
 }
