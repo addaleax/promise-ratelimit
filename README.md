@@ -21,7 +21,7 @@ var throttle = require('promise-ratelimit')(2000); /* rateInMilliseconds */
 var startTime = Date.now();
 
 for (var i = 0; i < 10; i++) {
-	throttle().then(function() { console.log(Date.now() - startTime); }).done();
+	throttle().then(function() { console.log(Date.now() - startTime); });
 }
 
 // example output:
