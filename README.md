@@ -8,7 +8,7 @@ q-ratelimit
 [![Dependency Status](https://david-dm.org/addaleax/q-ratelimit.svg?style=flat)](https://david-dm.org/addaleax/q-ratelimit)
 [![devDependency Status](https://david-dm.org/addaleax/q-ratelimit/dev-status.svg?style=flat)](https://david-dm.org/addaleax/q-ratelimit#info=devDependencies)
 
-Rate limiting (throttling) implementation for Q promises on Node.js
+Rate limiting (throttling) implementation for Promises on Node.js
 
 Install:
 `npm install q-ratelimit`
@@ -41,3 +41,7 @@ License
 ===
 
 MIT
+
+Note: [q-ratelimit](https://github.com/addaleax/q-ratelimit) and
+[promise-ratelimit](https://github.com/addaleax/promise-ratelimit) are
+sister modules based on the same original code.
