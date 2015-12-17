@@ -1,6 +1,8 @@
 'use strict';
 
-var Q = require('q');
+const delay = (ms) => {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 function ratelimit(rateInMs) {
 	rateInMs = parseInt(rateInMs);
@@ -11,7 +13,7 @@ function ratelimit(rateInMs) {
 		rateInMs = 0;
 	
 	var throttle = function() {
-		var deferred = Q.defer();
+		var deferred = Promise.defer();
 		throttle.queue.push(deferred);
 		
 		return throttle.check().then(function() {
@@ -45,7 +47,7 @@ function ratelimit(rateInMs) {
 		
 		var waitingTime = rateInMs - (Date.now() - throttle.lastExecutionTime);
 		return throttle.currentlyActiveCheck =
-			(waitingTime > 0 ? Q.delay(waitingTime) : Q()).then(function()
+			(waitingTime > 0 ? delay(waitingTime) : Promise.resolve()).then(function()
 		{
 			var now = Date.now();
 			if (now - throttle.lastExecutionTime >= rateInMs) {

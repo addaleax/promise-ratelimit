@@ -1,6 +1,5 @@
 'use strict';
 
-var Q = require('q');
 var assert = require('assert');
 var _ = require('lodash');
 var ratelimit = require('../');
@@ -17,7 +16,7 @@ describe('ratelimit', function() {
 		
 		var lastExecTime = Date.now() - period;
 		
-		return Q.all(_.range(promiseCount).map(function() {
+		return Promise.all(_.range(promiseCount).map(function() {
 			return throttle().then(function() {
 				var now = Date.now();
 				
