@@ -4,6 +4,15 @@ const delay = (ms) => {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+const defer = () => {
+	var deferred = {};
+	deferred.promise = new Promise((resolve, reject) => {
+		deferred.resolve = resolve;
+		deferred.reject = reject;
+	});
+	return deferred;
+};
+
 function ratelimit(rateInMs) {
 	rateInMs = parseInt(rateInMs);
 	if (rateInMs != rateInMs) // NaN check
@@ -13,7 +22,7 @@ function ratelimit(rateInMs) {
 		rateInMs = 0;
 	
 	var throttle = function() {
-		var deferred = Promise.defer();
+		var deferred = defer();
 		throttle.queue.push(deferred);
 		
 		return throttle.check().then(function() {
