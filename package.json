@@ -12,7 +12,7 @@
 		"mocha": "*",
 		"istanbul": "*",
 		"coveralls": "*",
-		"lodash": "~3.10.0"
+		"lodash": "^4.16.4"
 	},
 	"homepage": "https://github.com/addaleax/promise-ratelimit",
 	"repository": {
